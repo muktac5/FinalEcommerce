@@ -142,6 +142,7 @@ export class ElectronicsComponent implements OnInit {
   cartitem:any=[];
   producttotal:number=0;
   itemsList:any=[];
+  categoryList:any=[];
   j:number=0;
   l:number=0;
   onChange(e:any){
@@ -269,6 +270,14 @@ onChangeOfRating(e:any){
           console.log(this.cartitem);
           this.itemsList.push(this.cartitem);
           this.userObj.cart=this.itemsList;
+          if(this.categoryList.includes(this.productList[j].category))
+          {
+
+          }
+          else{
+            this.categoryList.push(this.productList[j].category);
+          }
+          this.userObj.category=this.categoryList;
           console.log(this.userObj);
           this.cartService.addtoCart(this.cartitem);
         }

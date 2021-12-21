@@ -14,7 +14,7 @@ export class RoleGuard implements CanActivate {
     if(role=="admin"){
       return true;
     }
-    this._snackbar.open("You dont have access to access this page. Contact your adminstrator","Close", {
+    this._snackbar.open("You dont have permissions to access this page. Contact your adminstrator","Close", {
       duration:2000,
       verticalPosition: 'top',
       horizontalPosition: 'center'

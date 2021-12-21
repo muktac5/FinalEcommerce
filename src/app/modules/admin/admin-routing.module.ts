@@ -11,6 +11,7 @@ import { RoleGuard } from 'src/app/guards/role.guard';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ProductsComponent } from './components/products/products.component';
+import { UserprofileComponent } from './components/userprofile/userprofile.component';
 const routes: Routes = [
   {
     path: '',component: AdminDashboardComponent,
@@ -23,6 +24,7 @@ const routes: Routes = [
       {path:'cart',component:CartComponent},
       {path:'services/:id',component:ProductsComponent},
       {path:'checkout',component:CheckoutComponent},
+      {path:'userprofile',component:UserprofileComponent},
       { path: '', redirectTo: '/admin/home', pathMatch: 'full' },
     ],
   },

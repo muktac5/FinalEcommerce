@@ -21,6 +21,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import{NgxSliderModule} from '@angular-slider/ngx-slider';
 import { ProductsComponent } from './components/products/products.component';
 import { MatMenuModule} from '@angular/material/menu';
+import { UserprofileComponent } from './components/userprofile/userprofile.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -34,7 +35,8 @@ import { MatMenuModule} from '@angular/material/menu';
     CartComponent,
     FilterPipe,
     CheckoutComponent,
-    ProductsComponent
+    ProductsComponent,
+    UserprofileComponent
   ],
   imports: [
     CommonModule,

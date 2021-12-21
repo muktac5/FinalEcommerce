@@ -1,0 +1,82 @@
+<div class="column">
+    <div class="row">
+<div class="card">
+    <div class="img">
+        <i class="fa fa-user-circle-o" style="font-size:48px;padding-left:30px;"></i>
+    </div>
+    <div class="infos">
+      <div class="name">
+        <h2>{{fullName}}</h2>
+        <h4>{{loggedInEmail}}</h4>
+      </div>
+      <p>LOCATION: {{loc}}</p>
+      <p>PHONE NO: {{phoneNo}}</p>
+      <div class="links">
+        <button class="follow">Edit Profile</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <ng-container *ngIf="cartitems.length !=0">
+  <div class="card1">
+      <div class="cart">
+    <div class="img">
+        <i class="fas fa-shopping-cart" style="font-size:48px;padding-left:30px;"></i>
+    </div>
+    <div class="infos">
+      <div class="name">
+        <h2>Cart details</h2>
+      </div>
+      
+                        <table class="table table-responsive">
+                        <thead >
+                            <tr style="background-color: black; color: white;">
+                                <th>Sr.No</th>
+                                <th>Product Name</th>
+                                <th>Product Image</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: lightgoldenrodyellow; color: black;">
+                        <tr *ngFor="let item of cartitems; let i = index">
+                          <td>{{i+1}}</td>
+                          <td>{{item.title}}</td>
+                          <td><img src="{{item.image}}" alt=""></td>
+                          <td style="width: 25%;">{{item.description}}</td>
+                          <td style="width: 12%;">{{item.price}}</td>
+                           </tr>
+                    </table>
+      <div class="links">
+        <button routerLink="../services" class="shopbtn btn mt-2 mb-2"><b>Shop More</b></button>
+      </div>
+    </div>
+</div>
+  </div>
+</ng-container>
+</div>
+
+
+<ng-container *ngIf="cartitems.length==0">
+  <div class="container">
+      <div class="card">
+          <h1 style="font-weight: bold;text-align: center;" class="card-title">Cart Details</h1>
+      </div>
+      <div class="center">
+          <img src="https://cdn.dribbble.com/users/5107895/screenshots/14532312/media/a7e6c2e9333d0989e3a54c95dd8321d7.gif" alt="">
+          <h2>Your cart is empty!</h2>
+          <button routerLink="../services" class="shopbtn btn"><b>Shop Now</b></button>
+      </div>
+  </div>
+</ng-container>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -16,7 +16,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <div class="container green borderXwidth">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="./home">Home
                         <span class="sr-only">(current)</span>
@@ -34,13 +34,13 @@
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="./contact">Contact</a>
                 </li>
-                <li class=" btn-primary nav-item text-white" role="button">
-                    <a class="nav-link text-white" (click)="logout()">Logout</a>
-                </li>
             </ul>
         </div>
-        
+
         </div>
     </div>
+    <button class="btn-primary nav-item text-white mx-3" style="height: 50px;width:80px;font: 18px Raleway;" (click)="logout()">Logout</button>
+    <a style="display: inline;font-size: 17px;" routerLink="./userprofile"><i class="fa fa-user-circle-o" style="align:center;margin: right 15px;font-size:40px;color:black"></i>{{fullName}}</a>
+
 </nav>
 

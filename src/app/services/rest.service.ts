@@ -24,7 +24,7 @@ export class RestService {
   getUser()
   {
     var URL = this.baseUrl+'user/getAll';
-    console.log(this.http.get(URL));
+    //console.log(this.http.get(URL));
     return this.http.get(URL);
   }
 

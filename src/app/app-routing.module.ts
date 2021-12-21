@@ -9,10 +9,10 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 const routes: Routes = [
   { path:'register1',component:RegisterComponent},
-  { path: '', redirectTo: '/homepage', pathMatch: 'full' },
+  { path:'', redirectTo: '/homepage', pathMatch: 'full' },
   {path:'homepage',component:HomepageComponent},
-  { path: 'login2', component: LoginComponent },
-  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path:'login2', component: LoginComponent },
+  { path:'forgot-password', component: ForgotPasswordComponent },
   {path:'forgot-password/verify',component:ResetpasswordComponent},
   {
     path: 'admin',
